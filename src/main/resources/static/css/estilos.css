@@ -1,0 +1,31 @@
+.card {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    z-index: 1;
+}
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+@media print {
+    thead {
+        display: table-header-group;
+    }
+
+    tr {
+        page-break-inside: avoid;
+    }
+    
+    table {
+        margin: 0 !important;
+    }
+    
+    .card, .card-body {
+        border: none !important;
+        box-shadow: none !important;
+    }
+
+    .d-print-none, .navbar, .footer {
+        display: none !important;
+    }
+}
